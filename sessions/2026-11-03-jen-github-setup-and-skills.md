@@ -7,7 +7,7 @@
 ## What changed
 - Mac: CauseMic SSH key served by 1Password (Touch ID), `github-causemic` SSH alias, CauseMic Git identity for CauseMic folders only. Ascendably setup untouched. See runbooks/causemic-ascendably-git-separation.md.
 - CauseMic-Hub: client repos created and cloned under ~/VSCODE/Clients/CauseMic/.
-- This repo: runbooks (Git separation; team SSH setup guide), skills/session-close, skills/asana, firm-config/causemic-firm-CLAUDE.md, BACKLOG.md. Skills installed in .claude/skills for testing.
+- This repo: runbooks (Git separation; team SSH setup guide, OS-neutral: Mac, Windows, Linux), skills/session-close, skills/asana, firm-config/causemic-firm-CLAUDE.md, BACKLOG.md. Skills installed in .claude/skills for testing.
 - Asana: description format and custom fields tested on a throwaway task (deleted after the test).
 - Google Doc: added a "10/22/26 Claude Proposal" tab with a proposed folder structure.
 
@@ -21,7 +21,7 @@
 
 ## Verified / not verified
 - Verified: Git identity and SSH separation; clone and push via github-causemic; Asana description format and custom fields
-- Not verified: /session-close run as an installed skill in a fresh session; the team SSH guide on another person's Mac
+- Not verified: /session-close run as an installed skill in a fresh session; the team SSH guide on another person's computer; its Windows and Linux steps have not been run on a real machine
 
 ## Open questions
 - Should the installed skill copies in .claude/ be committed? (owner: Jen)
