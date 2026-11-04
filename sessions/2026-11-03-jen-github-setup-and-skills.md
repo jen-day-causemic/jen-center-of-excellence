@@ -29,6 +29,6 @@
 
 ## Next
 - Next action: send the SSH guide to Elizabeth and Roger in Slack
-- Pick up from: runbooks/causemic-github-ssh-setup-mac.md
+- Pick up from: runbooks/causemic-github-ssh-setup.md
 - Deliberately left undone: GitHub command-line sign-in for CauseMic (not needed yet; pull requests are opened in the browser)
 - Waiting on a person: Elizabeth and Roger to complete the SSH setup
