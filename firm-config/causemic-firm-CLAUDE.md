@@ -72,16 +72,21 @@ Approval for one action covers that action only. It doesn't carry over to the ne
 
 ## Sessions and sidebar sections
 
-At the start of every new session, before doing the task, check which sidebar section it's in (`get_session` with `self`, then its `group`) and which folder it's working in.
+At the start of every new session, before doing the task, check which sidebar section it's in (`get_session` with `self`, then its `group`), which folder it's working in, and which repo that work belongs to.
 
-| Sidebar section | Folder |
-|---|---|
-| AZHS - Arizona Humane | `~/MyClaude/CauseMic/AZHS - Arizona Humane` |
-| Sandler | `~/MyClaude/CauseMic/Sandler - Sandler Partners` |
-| Clean Slate Initiative (CSI) | `~/MyClaude/CauseMic/CSI - Clean Slate Initiative` |
-| BGCP - Boys and Girls Club Portland | `~/MyClaude/CauseMic/BGCP - Boys and Girls Club of Portland` |
-| SBGP - South Baltimore Gateway Partnership | `~/MyClaude/CauseMic/SBGP - South Baltimore Gatway Partnership` |
-| Jen COE | `~/MyClaude/CauseMic/jen_center_of_excellence` |
+The **Folder** is Jen's local working folder (notes and files that stay out of Git). The **Repo** is Jen's local clone of the shared Git repo. These paths are for this computer only; teammates have their own.
+
+| Sidebar section | Folder | Repo |
+|---|---|---|
+| AZHS - Arizona Humane | `~/MyClaude/CauseMic/AZHS - Arizona Humane` | `~/VSCODE/Clients/CauseMic/arizona-humane-society` |
+| Sandler | `~/MyClaude/CauseMic/Sandler - Sandler Partners` | none yet |
+| Clean Slate Initiative (CSI) | `~/MyClaude/CauseMic/CSI - Clean Slate Initiative` | `~/VSCODE/Clients/CauseMic/clean-slate-initiative` |
+| BGCP - Boys and Girls Club Portland | `~/MyClaude/CauseMic/BGCP - Boys and Girls Club of Portland` | `~/VSCODE/Clients/CauseMic/boys-and-girls-club-portland` |
+| SBGP - South Baltimore Gateway Partnership | `~/MyClaude/CauseMic/SBGP - South Baltimore Gateway Partnership` | `~/VSCODE/Clients/CauseMic/south-baltimore-gateway-partnership-SBGP` |
+| Jen COE | `~/MyClaude/CauseMic/jen_center_of_excellence` | same as the folder |
+
+- **Get current with the repo before the task.** When the row names a repo and the session isn't already inside it, Claude Code won't load that repo's rules or start-of-session hook on its own. So: read the repo's `CLAUDE.md` and follow its "Start of every session" steps. If the repo has `.claude/hooks/session-start-sync.sh`, run it as `CLAUDE_PROJECT_DIR="<repo>" "<repo>/.claude/hooks/session-start-sync.sh"` and tell Jen in one or two lines what it found. Then work on the repo's files by their full path.
+- **Repo is "none yet", or the work clearly needs a repo that isn't listed:** ask Jen which repo it belongs to, then add it here.
 
 - **In a listed section, in the wrong folder:** tell Jen, then move the session to that section's folder (`change_directory`). The move takes effect when the current reply ends, so the folder's own CLAUDE.md and memory apply from the next message.
 - **In a section that isn't in the table:** ask Jen which folder it belongs to, then add the row here (in the CoE repo source, then reinstall).
