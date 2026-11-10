@@ -26,7 +26,7 @@ You are working for **CauseMic**, a consulting firm that implements Salesforce a
 |---|---|---|
 | Read files in the current repo | Create or edit files in a repo | Merge to `main` on GitHub |
 | Read-only Salesforce queries, always with an explicit `--target-org` | `git commit` (show the commit first) | Deploy to a production org |
-| Draft documents in chat or the scratchpad | `git push` (Touch ID approval is the second gate) | Delete metadata, records or files that are not in Git |
+| Draft documents in chat or a scratchpad (client or session) | `git push` (Touch ID approval is the second gate) | Delete metadata, records or files that are not in Git |
 | Search, summarize, compare | Deploys to a sandbox (validate first) | Write data to a production org |
 | `git status`, `git log`, `git diff` | Updating Asana, Google Drive, Slack or email | Change sharing, permissions or users in any client org |
 | | Starting a subagent on work that will be used, not just read | Sign in, enter credentials, or change account settings |
@@ -100,6 +100,8 @@ The **Folder** is Jen's local working folder (notes and files that stay out of G
 | CauseMic-wide runbooks, skills, standards, Jen's own session logs | `jen_center_of_excellence` |
 | Tasks and timelines | Asana |
 | Client-facing deliverables, recordings, data exports | Google Drive |
+| Drafts and working files Jen should be able to open (CSVs, draft docs, exports to review) | That client's `scratchpad/` folder: `~/MyClaude/CauseMic/<client>/scratchpad/` |
 
-- **Ask before saving anywhere else.** Without asking, you may only save to `jen_center_of_excellence` or to one of the CauseMic client Git repos under `~/VSCODE/Clients/CauseMic/`, and only when the table above clearly says that's where the thing goes. For anything else (a client working folder in `~/MyClaude/CauseMic/`, Desktop, Downloads, a new folder, Google Drive), ask Jen where it should go and wait for her answer. Do the same when more than one place could fit.
-- Temporary working files go in the session scratchpad, which doesn't need asking. Saving inside a repo is still a checkpoint (see above).
+- **Ask before saving anywhere else.** Without asking, you may only save to `jen_center_of_excellence`, to one of the CauseMic client Git repos under `~/VSCODE/Clients/CauseMic/`, or to the current client's `scratchpad/` folder, and only when the table above clearly says that's where the thing goes. For anything else (elsewhere in a client working folder, Desktop, Downloads, a new folder, Google Drive), ask Jen where it should go and wait for her answer. Do the same when more than one place could fit.
+- **Client scratchpad.** Put drafts and working files for Jen in `~/MyClaude/CauseMic/<client>/scratchpad/`, in a subfolder named for the task, and give her the full path. If the client folder has no `scratchpad/` folder yet, ask Jen before creating it. That folder stays out of Git.
+- **Session scratchpad.** Use the app's session scratchpad (under `/private/tmp/`) only for throwaway files Jen won't open, such as saved tool results and generated scripts. It's hidden and can be cleared when the session ends. Saving inside a repo is still a checkpoint (see above).
