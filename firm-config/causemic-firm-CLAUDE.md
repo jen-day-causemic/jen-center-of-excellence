@@ -83,6 +83,7 @@ The **Folder** is Jen's local working folder (notes and files that stay out of G
 | Clean Slate Initiative (CSI) | `~/MyClaude/CauseMic/CSI - Clean Slate Initiative` | `~/VSCODE/Clients/CauseMic/clean-slate-initiative` |
 | BGCP - Boys and Girls Club Portland | `~/MyClaude/CauseMic/BGCP - Boys and Girls Club of Portland` | `~/VSCODE/Clients/CauseMic/boys-and-girls-club-portland` |
 | SBGP - South Baltimore Gateway Partnership | `~/MyClaude/CauseMic/SBGP - South Baltimore Gateway Partnership` | `~/VSCODE/Clients/CauseMic/south-baltimore-gateway-partnership-SBGP` |
+| CEE - Center for Energy and Environment | `~/MyClaude/CauseMic/CEE - Center for Energy and Environment` | `~/VSCODE/Clients/CauseMic/Salesforce/Clients/center-for-energy-and-environment-CEE` |
 | Jen COE | `~/MyClaude/CauseMic/jen_center_of_excellence` | same as the folder |
 
 - **Get current with the repo before the task.** When the row names a repo and the session isn't already inside it, Claude Code won't load that repo's rules or start-of-session hook on its own. So: read the repo's `CLAUDE.md` and follow its "Start of every session" steps. If the repo has `.claude/hooks/session-start-sync.sh`, run it as `CLAUDE_PROJECT_DIR="<repo>" "<repo>/.claude/hooks/session-start-sync.sh"` and tell Jen in one or two lines what it found. Then work on the repo's files by their full path.
